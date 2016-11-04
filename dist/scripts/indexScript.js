@@ -1,11 +1,12 @@
 $(function() {
 
     var menuList = $('.header__nav li'),
-        menuancor = $(".scrollTo"),
+        menuancor = $('.scrollTo'),
+        hamburger = $('.template__header_hamburger'),
         icons = $('.icons');
 
 
-    $('.template__header_hamburger').click(function () {
+    hamburger.click(function () {
         $(this).toggleClass('open');
         $('.template__header').toggleClass('color__toggler');
     });
@@ -13,6 +14,7 @@ $(function() {
     menuancor.each(function(i, elem) {
         menuList.eq(i).click(function() {
             $('html, body').animate({scrollTop: ($(elem).offset().top - $('.template__header').height() - $('.template__pre-header').height())}, 1000);
+            hamburger.trigger('click');
         });
     });
 
