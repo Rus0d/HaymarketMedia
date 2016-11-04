@@ -16,7 +16,7 @@ $(function() {
         });
     });
 
-    if (!!Modernizr.svg) {
+    if (!Modernizr.svg) {
         icons.each(function(i, elem) {
             var tempUrl = $(elem).css('background-image');
             $(elem).css('background-image', tempUrl.replace(".svg",".png"));

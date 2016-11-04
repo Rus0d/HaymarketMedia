@@ -10,6 +10,7 @@ body {
     .template__wrapper_large {
         padding: $pre-header-height 0 $footer-height 0;
         min-height: 100%;
+        overflow: hidden;
 
         header {
             position: fixed;
@@ -482,6 +483,7 @@ body {
                     box-sizing: border-box;
                     background-color: #d31d38;
                     cursor: pointer;
+                    -webkit-appearance: none;
                 }
 
                 .footer__inline_block_add_links {
